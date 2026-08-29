@@ -23,7 +23,7 @@ Product behaviour, API versions, examples, brand content, and public assets chan
 ## System shape
 
 ```mermaid
-flowchart LR
+flowchart TD
     n0["Product behaviour"]
     n1["Documentation source"]
     n2["Build pipeline"]
