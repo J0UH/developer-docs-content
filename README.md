@@ -1,16 +1,21 @@
+[← All systems](https://github.com/J0UH) · [Product engineering](https://github.com/J0UH/product-engineering)
+
 <p align="center">
-  <img src="assets/hero.png" alt="Developer documentation and content systems system illustration" width="100%" />
+  <img src="assets/hero.webp" alt="Layered blank plates form a structural beam carrying three heavy columns" width="100%" />
 </p>
 
 # Developer documentation and content systems
 
 Documentation is part of the interface. It is where an integration either becomes understandable or turns into support work for both teams.
 
-[Discuss a similar system](mailto:ju@jomena.group?subject=Discuss%20Developer%20documentation%20and%20content%20systems) | [Book a technical call](mailto:ju@jomena.group?subject=Book%20a%20technical%20call%20about%20Developer%20documentation%20and%20content%20systems)
-
 ## The engineering problem
 
 Product behaviour, API versions, examples, brand content, and public assets change at different speeds. The content system had to keep those pieces navigable and close enough to engineering truth.
+
+
+## Foundation and adaptation
+
+Parts of the documentation estate began from the [Mintlify starter](https://github.com/mintlify/starter) and Travis Fischer's MIT-licensed [Next.js Notion starter](https://github.com/transitive-bullshit/nextjs-notion-starter-kit). The documentation work covers information architecture, product and API content, examples, the visual system, migration guidance, and maintenance.
 
 ## What the system covers
 
@@ -24,17 +29,15 @@ Product behaviour, API versions, examples, brand content, and public assets chan
 
 ```mermaid
 flowchart TD
-    n0["Product behaviour"]
-    n1["Documentation source"]
-    n2["Build pipeline"]
-    n3["Public reference"]
-    n4["Examples"]
-    n5["Feedback"]
-    n0 --> n1
-    n1 --> n2
-    n2 --> n3
-    n3 --> n4
-    n4 --> n5
+accTitle: Developer documentation and content systems
+accDescr: Documentation is built against product behaviour. Examples gate publication; failures repair either the docs or the interface, and reader feedback returns to the product source.
+    behaviour["Product behaviour"] --> source["Documentation source"]
+    source --> build{"Examples still pass?"}
+    build -->|No| repair["Repair docs or interface"]
+    repair --> source
+    build -->|Yes| publish["Public reference"]
+    publish --> feedback["Reader feedback"]
+    feedback --> behaviour
 ```
 
 ## Build notes
@@ -43,8 +46,8 @@ flowchart TD
 - Give version changes a visible migration path.
 - Keep reusable public assets licensed and traceable.
 
-<sub>Built under the Aryze umbrella. The underlying source and company IP remain private and owned by Aryze. Delivery involved people across engineering, product, operations, compliance, and design. Open-source foundations retain their original attribution and licences.</sub>
+<sub>Public overview only. Source code, customer data, credentials, and private operating details are not included.</sub>
 
 ## Talk through a similar problem
 
-If you are trying to build, untangle, or ship a system in this area, [send me a note](mailto:ju@jomena.group?subject=I%20need%20help%20with%20Developer%20documentation%20and%20content%20systems). If the problem needs a deeper technical conversation, [book a call by email](mailto:ju@jomena.group?subject=Book%20a%20technical%20call%20about%20Developer%20documentation%20and%20content%20systems).
+Working on something similar? [Tell me about it](mailto:ju@jomena.group?subject=Developer%20documentation%20and%20content%20systems).
