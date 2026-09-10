@@ -1,23 +1,28 @@
-[← All systems](https://github.com/J0UH) · [Product engineering](https://github.com/J0UH/product-engineering)
-
-<p align="center">
-  <img src="assets/hero.webp" alt="Layered blank plates form a structural beam carrying three heavy columns" width="100%" />
-</p>
+[← All work](https://github.com/J0UH) · [Product engineering](https://github.com/J0UH/product-engineering)
 
 # Developer documentation and content systems
 
-Documentation is part of the interface. It is where an integration either becomes understandable or turns into support work for both teams.
+Documentation and content systems that help a developer get from a product idea to a working integration.
 
-## The engineering problem
+<img src="assets/hero-v2.webp" alt="Developer documentation and content systems illustrated as a crafted architectural model, with exposed sketch and structural framing" width="100%" />
 
-Product behaviour, API versions, examples, brand content, and public assets change at different speeds. The content system had to keep those pieces navigable and close enough to engineering truth.
+The documentation is often where someone discovers whether an API makes sense. A good example lets them move forward. A missing assumption can send both teams into a long support exchange.
 
+This work connects the structure of the documentation to the product it describes. API versions, examples, migration notes, and visual assets need a clear place and a way to stay current.
 
-## Foundation and adaptation
+## Keeping the example close to the interface
+
+Parts of the documentation estate began with Mintlify and the Next.js Notion starter. The work around those foundations covers information architecture, product and API content, visual systems, and maintenance.
+
+An example should be checked against the interface it documents. When a version changes, the reader needs to see what changed and how to migrate.
+
+I also treat reusable public assets as maintained material. Their origin and licence matter, just as their consistency does. The aim is a documentation system that makes the next integration easier without requiring the person who wrote it to be in every conversation.
+
+## Built on
 
 Parts of the documentation estate began from the [Mintlify starter](https://github.com/mintlify/starter) and Travis Fischer's MIT-licensed [Next.js Notion starter](https://github.com/transitive-bullshit/nextjs-notion-starter-kit). The documentation work covers information architecture, product and API content, examples, the visual system, migration guidance, and maintenance.
 
-## What the system covers
+## What the work covers
 
 - API and integration documentation
 - Documentation platform architecture
@@ -25,7 +30,8 @@ Parts of the documentation estate began from the [Mintlify starter](https://gith
 - Reusable token and brand assets
 - Versioned examples and migration guidance
 
-## System shape
+<details>
+<summary>A closer look at the technical flow</summary>
 
 ```mermaid
 flowchart TD
@@ -40,14 +46,14 @@ accDescr: Documentation is built against product behaviour. Examples gate public
     feedback --> behaviour
 ```
 
-## Build notes
+</details>
 
-- Test examples against the interface they document.
-- Give version changes a visible migration path.
-- Keep reusable public assets licensed and traceable.
+## Related work
 
-<sub>Public overview only. Source code, customer data, credentials, and private operating details are not included.</sub>
+- [Product engineering](https://github.com/J0UH/product-engineering)
+- [Digital sales systems](https://github.com/J0UH/digital-sales-systems)
+- [Developer platform and delivery](https://github.com/J0UH/developer-platform-delivery)
 
-## Talk through a similar problem
+Working on a similar problem? [Tell me what you are building](mailto:ju@jomena.group?subject=Developer%20documentation%20and%20content%20systems).
 
-Working on something similar? [Tell me about it](mailto:ju@jomena.group?subject=Developer%20documentation%20and%20content%20systems).
+*This is a public account of the work. Source code and private operating details are not included in this repository.*
